@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #check if dir exist, if not then get it
 if [ ! -d "./shakespeare" ]
@@ -28,29 +29,4 @@ linePerFile=$((allLength / numSeparation))
 
 split -l $linePerFile all
 
-#one word per line
-#sed -e 's/' '/\t/g'
-#tr ' ' '\n' < xad
-
-#One word per line
-tr ' ' '\n' < xaa > xaaNew
-tr ' ' '\n' < xab > xabNew
-tr ' ' '\n' < xac > xacNew
-tr ' ' '\n' < xad > xadNew
-tr ' ' '\n' < xae > xaeNew
-
-
-
-#sort merge
-sort xaaNew > xaa
-sort xabNew > xab 
-sort xacNew > xac 
-sort xadNew > xad 
-sort xaeNew > xae 
-
-
-
-
-
-
-
+rm all
